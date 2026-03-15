@@ -1,0 +1,50 @@
+[
+  {
+    "type": "publication",
+    "badge": "Publication",
+    "icon": "FaFileAlt",
+    "iconColor": "blue.400",
+    "title": "CTPNET accepted by ICASSP 2026",
+    "description": "\"Channel, Trend and Periodic-Wise Representation Learning for Multivariate Long-term Time Series Forecasting\" has been accepted by ICASSP.",
+    "date": "2026",
+    "sortDate": "2026-01-01",
+    "links": [
+      { "text": "arXiv", "url": "https://arxiv.org/abs/2509.23583", "icon": "SiArxiv" }
+    ]
+  },
+  {
+    "type": "publication",
+    "badge": "Under Review",
+    "icon": "FaFileAlt",
+    "iconColor": "orange.400",
+    "title": "DSTN submitted to IEEE TCCN",
+    "description": "\"Diffusion-Based Spatio-Temporal Channel Prediction via Non-Stationarity Decoupling\" is under review at IEEE TCCN (Revision 2).",
+    "date": "2026",
+    "sortDate": "2026-01-01",
+    "links": []
+  },
+  {
+    "type": "publication",
+    "badge": "Under Review",
+    "icon": "FaFileAlt",
+    "iconColor": "orange.400",
+    "title": "FIPRNet submitted to KBS",
+    "description": "\"Frequency Interpolation with Period-aware Regularization for Robust Long-term Time Series Forecasting\" is under review at KBS (Minor Revision).",
+    "date": "2026",
+    "sortDate": "2026-01-01",
+    "links": []
+  },
+  {
+    "type": "publication",
+    "badge": "Publication",
+    "icon": "FaFileAlt",
+    "iconColor": "blue.400",
+    "title": "SDDM published at WCSP 2025",
+    "description": "\"Channel Prediction Based on Spatially Dependent Diffusion Models\" was published at WCSP 2025.",
+    "date": "Oct 2025",
+    "sortDate": "2025-10-01",
+    "links": [
+      { "text": "DOI", "url": "https://doi.org/10.1109/WCSP68525.2025.1010203", "icon": "FaFilePdf" }
+    ]
+  }
+]
