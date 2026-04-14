@@ -1,5 +1,6 @@
 import { ChakraProvider } from '@chakra-ui/react'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
+import { useEffect } from 'react'
 import theme from './theme'
 import Layout from './components/Layout'
 import Home from './components/Home'
@@ -16,6 +17,12 @@ import GuideDocs from './components/GuideDocs'
 
 function App() {
   const features = siteConfig.features as Record<string, boolean>
+
+  useEffect(() => {
+    const configuredTitle = import.meta.env.VITE_SITE_TITLE?.trim()
+    const fallbackTitle = siteConfig.name?.full || siteConfig.name?.display || 'Zhangyang Song\'s Scholar Website'
+    document.title = configuredTitle || fallbackTitle
+  }, [])
 
   return (
     <ChakraProvider theme={theme}>
