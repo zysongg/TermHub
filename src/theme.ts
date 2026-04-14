@@ -6,16 +6,19 @@ const theme = extendTheme({
     useSystemColorMode: false,
   },
   fonts: {
-    body: '"SF Mono", Consolas, "Liberation Mono", Menlo, monospace',
-    heading: '"SF Mono", Consolas, "Liberation Mono", Menlo, monospace',
+    body: '"Book Antiqua", "Palatino Linotype", Palatino, serif',
+    heading: '"Book Antiqua", "Palatino Linotype", Palatino, serif',
     mono: '"SF Mono", Consolas, "Liberation Mono", Menlo, monospace',
   },
   styles: {
     global: {
+      html: {
+        fontSize: '18px',
+      },
       body: {
         bg: 'var(--bg-color)',
         color: 'var(--text-color)',
-        fontSize: '14px',
+        fontSize: '1rem',
         lineHeight: 1.6,
       },
     },

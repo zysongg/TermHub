@@ -5,7 +5,7 @@ authors: [Zhangyao Song, Xiang Zhang, Li Zhuang, Tao Guo, Xiaoyu Zhao, Yinfei Xu
 venue: "IEEE Transactions on Cognitive Communications and Networking (TCCN)"
 venueType: preprint
 year: 2026
-status: Under review (Revision 2)
+status: accepted
 isFirstAuthor: true
 links: {}
 emoji: "🛰️"

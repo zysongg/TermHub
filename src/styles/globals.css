@@ -28,12 +28,16 @@
   box-sizing: border-box;
 }
 
+html {
+  font-size: 18px;
+}
+
 body {
-  font-family: "SF Mono", Consolas, "Liberation Mono", Menlo, monospace;
+  font-family: "Book Antiqua", "Palatino Linotype", Palatino, serif;
   line-height: 1.6;
   color: var(--text-color);
   background-color: var(--bg-color);
-  font-size: 14px;
+  font-size: 1rem;
 }
 
 pre {

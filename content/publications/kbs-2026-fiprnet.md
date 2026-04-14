@@ -5,7 +5,7 @@ authors: [Zhangyao Song, Nanqing Jiang, Ziqiong Li, Li Zhuang, Yinfei Xu, Tao Gu
 venue: "Knowledge-Based Systems (KBS)"
 venueType: preprint
 year: 2026
-status: Under review (Minor Revision)
+status: accepted
 isFirstAuthor: true
 links: {}
 emoji: "📈"
