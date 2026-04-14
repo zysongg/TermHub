@@ -2,6 +2,7 @@ import { Box, VStack, Heading, Text, useColorModeValue, Link, HStack, Container,
 import { useMemo } from 'react'
 import { research, experience, news, about, publications, institutionLogos } from '../data'
 import { siteConfig, selectedPublicationIds } from '@/site.config'
+import { withBase } from '@/utils/asset'
 import DynamicIcon from './DynamicIcon'
 
 // Import sub-components
@@ -88,7 +89,7 @@ const PublicationCard = ({ pub }: { pub: any }) => {
             borderRadius="sm"
           >
             <Image
-              src={pub.featuredImage}
+              src={withBase(pub.featuredImage)}
               alt={pub.title}
               w="full"
               h="full"
@@ -265,7 +266,7 @@ const PublicationCard = ({ pub }: { pub: any }) => {
           <ModalCloseButton color={useColorModeValue('gray.700', 'gray.200')} />
           <ModalBody p={0} display="flex" alignItems="center" justifyContent="center">
             <Image
-              src={pub.featuredImage}
+              src={withBase(pub.featuredImage)}
               alt={`${pub.title} large preview`}
               maxH="80vh"
               maxW="90vw"

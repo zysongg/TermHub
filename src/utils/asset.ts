@@ -1,5 +1,6 @@
 export const withBase = (path?: string) => {
   if (!path) return path
+  if (/^(?:[a-z][a-z0-9+.-]*:|\/\/)/i.test(path)) return path
   const clean = path.startsWith('/') ? path.slice(1) : path
   const baseEnv = (import.meta as any)?.env?.BASE_URL as string | undefined
   const base = baseEnv && baseEnv !== '' ? baseEnv : '/'

@@ -12,6 +12,7 @@ import { experience as experienceData } from '../data'
 import { institutionLogos } from '../data'
 import { siteOwner } from '@/site.config'
 import { terminalPalette } from '@/config/theme'
+import { withBase } from '@/utils/asset'
 
 /* ── Keyframes ─────────────────────────────────────────────────── */
 const blink = keyframes`0%,100%{opacity:1}50%{opacity:0}`
@@ -36,7 +37,7 @@ const roleTypeConfig: Record<RoleType, { label: string; color: (dk: boolean) => 
 const localLogos = institutionLogos
 
 const getIconUrl = (url?: string, company?: string) => {
-  if (company && localLogos[company]) return localLogos[company]
+  if (company && localLogos[company]) return withBase(localLogos[company])
   if (url) {
     try { return `https://www.google.com/s2/favicons?domain=${new URL(url).hostname}&sz=64` }
     catch { /* fall through */ }
@@ -264,7 +265,7 @@ const Experience: React.FC = () => {
                 return (
                   <HStack key={edu.course} fontSize="xs" spacing={2}>
                     {logo ? (
-                      <Image src={logo} alt="" w="16px" h="16px" borderRadius="sm" objectFit="contain" flexShrink={0} />
+                      <Image src={withBase(logo)} alt="" w="16px" h="16px" borderRadius="sm" objectFit="contain" flexShrink={0} />
                     ) : (
                       <Box w="16px" h="16px" borderRadius="sm" bg={`${termCommand}20`} flexShrink={0} />
                     )}

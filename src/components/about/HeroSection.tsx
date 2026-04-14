@@ -168,7 +168,7 @@ const HeroSection = ({ title, avatar, research = [], researchLogos = {}, educati
                         <Link key={index} href={item.link} isExternal _hover={{ textDecoration: 'none' }} w="full">
                           <HStack spacing={2.5} p={2} borderRadius="md" transition="all 0.2s" _hover={{ bg: useColorModeValue('gray.100', 'gray.700') }}>
                             {logo ? (
-                              <Image src={logo} alt={item.lab} w="28px" h="28px" borderRadius="sm" objectFit="contain" flexShrink={0} />
+                              <Image src={withBase(logo)} alt={item.lab} w="28px" h="28px" borderRadius="sm" objectFit="contain" flexShrink={0} />
                             ) : (
                               <Flex w="28px" h="28px" borderRadius="sm" bg={accentBg} align="center" justify="center" flexShrink={0}>
                                 <Text fontSize="sm">{item.emoji}</Text>
@@ -196,7 +196,7 @@ const HeroSection = ({ title, avatar, research = [], researchLogos = {}, educati
                       return (
                         <HStack key={index} spacing={2.5} p={2} borderRadius="md" w="full">
                           {logo ? (
-                            <Image src={logo} alt={item.institution} w="28px" h="28px" borderRadius="sm" objectFit="contain" flexShrink={0} />
+                            <Image src={withBase(logo)} alt={item.institution} w="28px" h="28px" borderRadius="sm" objectFit="contain" flexShrink={0} />
                           ) : (
                             <Flex w="28px" h="28px" borderRadius="sm" bg={accentBg} align="center" justify="center" flexShrink={0}>
                               <Text fontSize="sm" fontWeight="bold" color="blue.500">{item.institution.charAt(0)}</Text>
@@ -275,7 +275,7 @@ const HeroSection = ({ title, avatar, research = [], researchLogos = {}, educati
                     <VStack key={pet.name} spacing={2}>
                       {pet.image && (
                         <Image
-                          src={pet.image}
+                          src={withBase(pet.image)}
                           alt={pet.name}
                           borderRadius="full"
                           boxSize={["40px", "50px"]}

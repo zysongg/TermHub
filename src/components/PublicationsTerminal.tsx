@@ -36,6 +36,7 @@ import { IconType } from 'react-icons'
 import { highlightData } from '../utils/highlightData'
 import { siteOwner } from '@/site.config'
 import { publicationVenueColors, terminalPalette } from '@/config/theme'
+import { withBase } from '@/utils/asset'
 
 /* ── Emoji → Icon mapping ─────────────────────────────────────── */
 const emojiIconMap: Record<string, IconType> = {
@@ -459,16 +460,16 @@ const PublicationsTerminal: React.FC = () => {
                       cursor="zoom-in"
                       role="button"
                       tabIndex={0}
-                      onClick={() => showImagePreview(pub.featuredImage, `${pub.title} thumbnail`)}
+                      onClick={() => showImagePreview(withBase(pub.featuredImage) as string, `${pub.title} thumbnail`)}
                       onKeyDown={(event) => {
                         if (event.key === 'Enter' || event.key === ' ') {
                           event.preventDefault()
-                          showImagePreview(pub.featuredImage, `${pub.title} thumbnail`)
+                          showImagePreview(withBase(pub.featuredImage) as string, `${pub.title} thumbnail`)
                         }
                       }}
                     >
                       <Image
-                        src={pub.featuredImage}
+                        src={withBase(pub.featuredImage)}
                         alt={`${pub.title} thumbnail`}
                         w="full"
                         h="full"
@@ -707,16 +708,16 @@ const PublicationsTerminal: React.FC = () => {
                           cursor="zoom-in"
                           role="button"
                           tabIndex={0}
-                          onClick={() => showImagePreview(pub.featuredImage, `${pub.title} featured image`)}
+                          onClick={() => showImagePreview(withBase(pub.featuredImage) as string, `${pub.title} featured image`)}
                           onKeyDown={(event) => {
                             if (event.key === 'Enter' || event.key === ' ') {
                               event.preventDefault()
-                              showImagePreview(pub.featuredImage, `${pub.title} featured image`)
+                              showImagePreview(withBase(pub.featuredImage) as string, `${pub.title} featured image`)
                             }
                           }}
                         >
                           <Image
-                            src={pub.featuredImage}
+                            src={withBase(pub.featuredImage)}
                             alt={`${pub.title} featured image`}
                             w="full"
                             h="full"
